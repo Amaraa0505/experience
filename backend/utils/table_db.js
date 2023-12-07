@@ -17,30 +17,28 @@ const createTables = async () => {
   console.log("created table");
 };
 
-
 const createTransaction = async () => {
   // await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; `;
-  
+
   console.log("CREATING transaction TABLE...");
   await sql`
   CREATE TABLE IF NOT EXISTS transaction (
-    id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-    user_id uuid REFERENCE users(id),
-    FOREIGN KEY (user_id) REFERENCE users(id),
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    user_id UUID REFERENCES users(id),
     name VARCHAR(50) NOT NULL,
     amount REAL NOT NULL,
-    transaction_type enumType,
-    description Text,
+    transaction_type transaction_type,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    category_id uuid DEFAULT uuid_generate_v4(),
-    FOREIGN KEY(category_id) REFERENCE category(id))
-    ;
+    category_id UUID REFERENCES category(id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
     `;
   console.log("CREATED TABLE.");
 };
 
-// const insertData = () => {};
+const insertData = () => {};
 createTransaction();
-// createTables();
-// insertData();
+createTables();
+insertData();

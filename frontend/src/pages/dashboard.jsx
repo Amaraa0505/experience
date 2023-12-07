@@ -2,7 +2,7 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="">
+    <div className="h-screen">
       <div className="flex flex-col gap-4 justify-center mt-8 items-center ">
         <div className="flex gap-4">
           <img src="./geldlogo.svg" className="h-8"></img>

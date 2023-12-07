@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function Balance() {
   const router = useRouter();
   return (
-    <div className=" ">
+    <div className="h-screen">
       <div className=" flex flex-col gap-4 justify-center mt-8 items-center ">
         <div className="flex gap-4 ">
           <img src="./geldlogo.svg"></img>
