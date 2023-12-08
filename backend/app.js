@@ -18,9 +18,7 @@ app.use("/cat", catRouter);
 app.use("/auth", authRoutes);
 app.use("/api/image", imageRoutes);
 app.use("/transaction", transactionRoutes);
-app.post("/customers", customerRoutes);
-app.get("/customers", customerRoutes);
-// app.post("/transaction", transactionRoutes);
+app.use("/customers", customerRoutes);
 
 app.listen(PORT, () => {
   console.log(`Сервер ${PORT} дээр аслаа.`);
