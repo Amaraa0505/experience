@@ -7,7 +7,7 @@ const addCategory= async (req, res) => {
     res.status(201).json({ message: "category success" });
   } catch (error) {
     console.log("ERR", error);
-    res.status(500).json({ message: "transaction failed" });
+    res.status(500).json({ message: "category failed" });
   }
 };
 

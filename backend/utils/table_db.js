@@ -38,6 +38,20 @@ const createTransaction = async () => {
   console.log("CREATED TABLE.");
 };
 
+const customerTable = async ()=> {
+    console.log("creating table");
+    await sql `
+    CREATE TABLE IF NOT EXISTS customer (
+        avatarImg TEXT,
+        username VARCHAR(50) NOT NULL,
+        lastname VARCHAR(50) NOT NULL,
+        email VARCHAR(50) UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    );`
+    console.log("table created");
+}
+
+customerTable();
 const insertData = () => {};
 createTransaction();
 createTables();

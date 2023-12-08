@@ -3,10 +3,11 @@ const { sql } = require("../config/pgDb");
 const addTransaction = async (req, res) => {
   try {
     const { user_id, name, amount, description, category_id } = req.body;
-    await sql`INSERT INTO transaction (name, amount, description, category_id, user_id) 
-      VALUES (${name}, ${amount}, ${description},  ${category_id}, ${user_id} )`;
+    await sql`INSERT INTO transaction (user_id, name, amount, description, category_id) 
+      VALUES (${user_id}, ${name}, ${amount}, ${description},  ${category_id} )`;
     res.status(201).json({ message: "transaction success" });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: "transaction failed" });
   }
 };
