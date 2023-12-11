@@ -56,3 +56,12 @@ const insertData = () => {};
 createTransaction();
 createTables();
 insertData();
+
+
+// userId 
+// name
+// amount
+// transaction_type
+// description
+// currency_type
+// category_id

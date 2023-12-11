@@ -78,6 +78,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="flex flex-col gap-2">
+        <input placeholder="FirstName" className="rounded-xl  h-10 w-96 p-4"></input>
+        <input placeholder="LastName" className="rounded-xl  h-10 w-96 p-4"></input>
+        <input placeholder="Email" className="rounded-xl w-96 h-10 p-4"></input>
+        <input placeholder="Password" className="rounded-xl w-96 h-10 p-4"></input>
+        <input placeholder="Address" className="rounded-xl w-96 h-10 p-4"></input>
+      </div>
     </div>
   );
 }

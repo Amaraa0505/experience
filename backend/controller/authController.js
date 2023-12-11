@@ -21,7 +21,7 @@ const signin = async (req, res) => {
 
     if (findUser.length === 0) {
       return res.status(400).json({ message: "user not found" });
-    }
+    } 
 
     const isCheck = bcrypt.compareSync(userPassword, findUser[0].password);
 
