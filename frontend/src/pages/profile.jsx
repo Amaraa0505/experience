@@ -12,15 +12,20 @@ export default function Home() {
     { study: "Pinecone" },
   ];
   return (
-    <div className="h-screen bg-slate-300">
-      <div className="flex flex-col items-center">
+    <div className="h-screen bg-slate-300 flex">
+      <div className="flex flex-col items-center p-32">
         <div className="relative">
           <img
             src="./galaxy.jpeg"
             className="w-[900px] h-[200px] mt-20 rounded-xl "
           ></img>
-          <img src="./dog.jpeg" className="rounded-full w-32 h-32 absolute bottom-[-30px] left-[30px] border-[5px]"></img>
-          <p className="text-2xl font-bold absolute bottom-[5px] left-[170px] text-white">Amaraa</p>
+          <img
+            src="./dog.jpeg"
+            className="rounded-full w-32 h-32 absolute bottom-[-30px] left-[30px] border-[5px]"
+          ></img>
+          <p className="text-2xl font-bold absolute bottom-[5px] left-[170px] text-white">
+            Amaraa
+          </p>
         </div>
         <div className="flex gap-20 mt-12">
           <div className="flex flex-col gap-5">
@@ -78,12 +83,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
-        <input placeholder="FirstName" className="rounded-xl  h-10 w-96 p-4"></input>
-        <input placeholder="LastName" className="rounded-xl  h-10 w-96 p-4"></input>
+      <div className="flex flex-col gap-4  bg-slate-200 rounded-xl h-[800px] w-[600px] justify-center items-center mt-36 ">
+        <img src="./dog.jpeg" className="w-32 h-32 rounded-full w-"></img>
+        <h1 className="font-bold text-2xl">Private Information</h1>
+        <input
+          placeholder="FirstName"
+          className="rounded-xl  h-10 w-96 p-4"
+        ></input>
+        <input
+          placeholder="LastName"
+          className="rounded-xl  h-10 w-96 p-4"
+        ></input>
         <input placeholder="Email" className="rounded-xl w-96 h-10 p-4"></input>
-        <input placeholder="Password" className="rounded-xl w-96 h-10 p-4"></input>
-        <input placeholder="Address" className="rounded-xl w-96 h-10 p-4"></input>
+        <input
+          placeholder="Password"
+          className="rounded-xl w-96 h-10 p-4"
+        ></input>
+        <input
+          placeholder="Address"
+          className="rounded-xl w-96 h-10 p-4"
+        ></input>
       </div>
     </div>
   );

@@ -16,20 +16,19 @@ const signin = async (req, res) => {
   try {
     const { userEmail, userPassword } = req.body;
 
-    const findUser =
-      await sql`SELECT name, email, password FROM users WHERE email='${userEmail}' `;
+    const findUser = await sql`SELECT * FROM users WHERE email=${userEmail}`;
 
     if (findUser.length === 0) {
       return res.status(400).json({ message: "user not found" });
-    } 
+    }
 
     const isCheck = bcrypt.compareSync(userPassword, findUser[0].password);
-
+    console.log("Login", isCheck);
     if (!isCheck) {
       return res.status(400).json({ message: "wrong username or password" });
     }
 
-    const { password, ...user } = findUser[0]; 
+    const { password, ...user } = findUser[0];
 
     res.status(201).json({ message: "success", user });
   } catch (error) {

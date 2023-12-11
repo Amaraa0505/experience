@@ -5,6 +5,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Log() {
+  const {loginUserData, login} 
   return (
     <div className="flex h-screen">
       <div className="flex-1 justify-center items-center flex ">

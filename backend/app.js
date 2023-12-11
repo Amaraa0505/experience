@@ -14,6 +14,7 @@ const app = express();
 app.use("/images", express.static(path.join(__dirname, "images/")));
 
 app.use(express.json());
+
 app.use("/cat", catRouter);
 app.use("/auth", authRoutes);
 app.use("/api/image", imageRoutes);
